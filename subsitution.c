@@ -17,7 +17,7 @@ if (argc != 2) // if it's not 2 arguments and not bigger than 2 arguments, then 
     printf("Usage: %s key\n", argv[0]);
     return 1;
 }
-
+//argv[1] contains the user-provided key. argv[0] is the program name itself - when you provide arguments in c, you can add additional arguments to the command line passed as an array of strings
 string key = argv[1];
 
 // Check if the key is valid by calling is_key_valid function implemented below 
