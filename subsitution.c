@@ -47,17 +47,23 @@ if (key_length != 26)
 {
     return false;
 }
-
+    
+//As the program processes the characters of the key, it will update the corresponding elements in the letters array to true to indicate that the letter has been used.
+//by setting it to true, we will be able to determine if it's a duplicate in the future
+//perform a boolean check in the future on same index to determine if it's been used before
+    
 bool letters[26] = {false};
     
 // looping through user provided key using 0 based indexing 
 for (int i = 0; i < key_length; i++)
 {
+    //isalpha is a built in function in c
     if (!isalpha(key[i]))
     {
         return false;
     }
-
+    // toupper ensures all mappings are case insensitive as 'A' and 'a' will be treated as the same. 
+    // characters are represented by their ascii values in c
     int index = toupper(key[i]) - 'A';
 
     if (letters[index])
