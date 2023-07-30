@@ -18,6 +18,7 @@ if (argc != 2) // if it's not 2 arguments and not bigger than 2 arguments, then 
     return 1;
 }
 //argv[1] contains the user-provided key. argv[0] is the program name itself - when you provide arguments in c, you can add additional arguments to the command line passed as an array of strings
+// the user's command line arguments, depending on how many they passed, get passed as - first argument argv[1],  second argument argv[2], third argument argv[3], etc - so think of it as normal counting instead of indexed based starting from 0 way of counting
 string key = argv[1];
 
 // Check if the key is valid by calling is_key_valid function implemented below 
