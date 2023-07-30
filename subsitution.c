@@ -12,7 +12,7 @@ void encrypt(string plaintext, string key);
 int main(int argc, string argv[])
 {
 // Check if the program is executed with exactly one command-line argument
-if (argc != 2)
+if (argc != 2) // if it's not 2 arguments and not bigger than 2 arguments, then it's one argument as you can't supply 0 or less arguments, so return 1
 {
     printf("Usage: %s key\n", argv[0]);
     return 1;
