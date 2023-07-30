@@ -20,7 +20,7 @@ if (argc != 2) // if it's not 2 arguments and not bigger than 2 arguments, then 
 
 string key = argv[1];
 
-// Check if the key is valid
+// Check if the key is valid by calling is_key_valid function implemented below 
 if (!is_key_valid(key))
 {
     printf("Invalid key. The key must contain 26 unique alphabetic characters.\n");
@@ -35,7 +35,7 @@ encrypt(plaintext, key);
 
 return 0;
 }
-
+//actual implementation of the is_key_valid function is here:
 bool is_key_valid(string key)
 {
 int key_length = strlen(key);
