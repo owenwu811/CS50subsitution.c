@@ -65,12 +65,13 @@ for (int i = 0; i < key_length; i++)
     // toupper ensures all mappings are case insensitive as 'A' and 'a' will be treated as the same. 
     // characters are represented by their ascii values in c
     int index = toupper(key[i]) - 'A';
-
+    
+    // bascically says that the letter has been used before as the index corresponding evaluates to true (question says "or not containing each letter exactly once), your program should print an error message" aka if any letters are duplicates or appear more than once".
     if (letters[index])
     {
-        return false;
+        return false; // return false because the key is not valid for subsitution cipher
     }
-
+    
     letters[index] = true;
 }
 
