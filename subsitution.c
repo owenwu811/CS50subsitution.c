@@ -39,10 +39,10 @@ return 0;
 //actual implementation of the is_key_valid function is here:
 bool is_key_valid(string key)
 {
-// key_length variable holds the length of the key passed in 
+// key_length variable holds the length of the key passed in by the user as a command line argument 
 int key_length = strlen(key);
     
-// because strlen uses regular 1 based ways of counting instead of indexed based ways, we can compare directly to see if it has 26 characters or not
+// because strlen uses regular 1 based ways of counting instead of indexed based ways, we can compare the key_length variable directly to see if it has 26 characters or not
 if (key_length != 26) 
 {
     return false;
