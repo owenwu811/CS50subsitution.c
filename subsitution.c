@@ -49,7 +49,8 @@ if (key_length != 26)
 }
 
 bool letters[26] = {false};
-
+    
+// looping through user provided key using 0 based indexing 
 for (int i = 0; i < key_length; i++)
 {
     if (!isalpha(key[i]))
