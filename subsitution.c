@@ -25,7 +25,7 @@ string key = argv[1];
 if (!is_key_valid(key))
 {
     printf("Invalid key. The key must contain 26 unique alphabetic characters.\n");
-    return 1;
+    return 1; #error
 }
 
 // Prompt the user for plaintext
@@ -34,7 +34,7 @@ string plaintext = get_string("plaintext: ");
 // Encrypt the plaintext using the key
 encrypt(plaintext, key);
 
-return 0;
+return 0; #success
 }
 //actual implementation of the is_key_valid function is here:
 bool is_key_valid(string key)
@@ -83,9 +83,9 @@ void encrypt(string plaintext, string key)
 {
 printf("ciphertext: ");
 
-for (int i = 0, n = strlen(plaintext); i < n; i++)
+for (int i = 0, n = strlen(plaintext); i < n; i++) 
 {
-    char c = plaintext[i];
+    char c = plaintext[i]; #indexing into plaintext string
 
     if (isalpha(c))
     {
