@@ -34,7 +34,7 @@ string plaintext = get_string("plaintext: ");
 // Encrypt the plaintext using the key
 encrypt(plaintext, key);
 
-return 0; #success
+return 0; #indicates success
 }
 //actual implementation of the is_key_valid function is here:
 bool is_key_valid(string key)
